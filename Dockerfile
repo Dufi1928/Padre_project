@@ -22,7 +22,7 @@ WORKDIR /var/www
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
 # Installer les dépendances de l'application sans scripts
-RUN composer install --no-interaction --no-scripts
+RUN composer install --no-interaction
 
 # Exposer le port 9000
 EXPOSE 9000
