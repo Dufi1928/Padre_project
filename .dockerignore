@@ -1,0 +1,25 @@
+/.env
+/.git
+/.github
+/.gitignore
+/docker
+/node_modules
+/public/bundles
+/var
+/vendor
+
+# Symfony specifics
+!/public/index.php
+!/public/.htaccess
+
+# Dependency directories (comment these lines if you want to include them in the docker build context)
+/vendor
+
+# Log & cache directories
+/var/*
+!/var/.gitkeep
+
+# Composer files (uncomment to include in docker build context)
+#/composer.json
+#/composer.lock
+#/symfony.lock

@@ -1,33 +1,31 @@
-# Utiliser une image de base contenant PHP et Apache
-FROM php:8.2-apache
+# Utiliser l'image PHP officielle comme image de base
+FROM php:8.2-fpm
 
-# Définir le répertoire de travail dans le conteneur
-WORKDIR /var/www/html
-
-# Installer les dépendances nécessaires pour Symfony
+# Installer git, unzip, et les extensions nécessaires pour PHP
 RUN apt-get update && apt-get install -y \
-    git \
     unzip \
-    libicu-dev \
-    zlib1g-dev \
     libzip-dev \
+    libpq-dev \
     && docker-php-ext-install \
-    pdo_mysql \
-    intl \
-    zip
+    pdo pdo_pgsql zip
 
-# Activer les modules Apache nécessaires pour Symfony
-RUN a2enmod rewrite
+# Installer Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Copier les fichiers de l'application Symfony dans le conteneur
-COPY . .
+COPY . /var/www
 
-# Installer les dépendances PHP avec Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-RUN composer install --no-scripts --no-autoloader --prefer-dist
+# Définir le répertoire de travail
+WORKDIR /var/www
 
-# Exposer le port 80
-EXPOSE 80
+# Permettre l'exécution de Composer en tant que super utilisateur
+ENV COMPOSER_ALLOW_SUPERUSER=1
 
-# Commande pour démarrer Apache
-CMD ["apache2-foreground"]
+# Installer les dépendances de l'application sans scripts
+RUN composer install --no-interaction --no-scripts
+
+# Exposer le port 9000
+EXPOSE 9000
+
+# Commande pour démarrer PHP-FPM
+CMD ["php-fpm"]
