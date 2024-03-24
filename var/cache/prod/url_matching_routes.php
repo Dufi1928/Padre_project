@@ -23,22 +23,22 @@ return [
                         .'|validation_errors/([^/]++)(?'
                             .'|(*:211)'
                         .')'
-                        .'|available_spots(?'
-                            .'|/([^/\\.]++)(?:\\.([^/]++))?(*:264)'
+                        .'|available_spotss(?'
+                            .'|/([^/\\.]++)(?:\\.([^/]++))?(*:265)'
                             .'|(?:\\.([^/]++))?(?'
-                                .'|(*:290)'
+                                .'|(*:291)'
                             .')'
                             .'|/([^/\\.]++)(?:\\.([^/]++))?(?'
-                                .'|(*:328)'
+                                .'|(*:329)'
                             .')'
                         .')'
                         .'|pre_registrations(?'
-                            .'|/([^/\\.]++)(?:\\.([^/]++))?(*:384)'
+                            .'|/([^/\\.]++)(?:\\.([^/]++))?(*:385)'
                             .'|(?:\\.([^/]++))?(?'
-                                .'|(*:410)'
+                                .'|(*:411)'
                             .')'
                             .'|/([^/\\.]++)(?:\\.([^/]++))?(?'
-                                .'|(*:448)'
+                                .'|(*:449)'
                             .')'
                         .')'
                     .')'
@@ -60,22 +60,22 @@ return [
             [['_route' => '_api_validation_errors_hydra', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'ApiPlatform\\Symfony\\Validator\\Exception\\ValidationException', '_api_operation_name' => '_api_validation_errors_hydra'], ['id'], ['GET' => 0], null, false, true, null],
             [['_route' => '_api_validation_errors_jsonapi', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'ApiPlatform\\Symfony\\Validator\\Exception\\ValidationException', '_api_operation_name' => '_api_validation_errors_jsonapi'], ['id'], ['GET' => 0], null, false, true, null],
         ],
-        264 => [[['_route' => '_api_/available_spots/{id}{._format}_get', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\AvailableSpots', '_api_operation_name' => '_api_/available_spots/{id}{._format}_get'], ['id', '_format'], ['GET' => 0], null, false, true, null]],
-        290 => [
-            [['_route' => '_api_/available_spots{._format}_get_collection', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\AvailableSpots', '_api_operation_name' => '_api_/available_spots{._format}_get_collection'], ['_format'], ['GET' => 0], null, false, true, null],
-            [['_route' => '_api_/available_spots{._format}_post', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\AvailableSpots', '_api_operation_name' => '_api_/available_spots{._format}_post'], ['_format'], ['POST' => 0], null, false, true, null],
+        265 => [[['_route' => '_api_/available_spotss/{id}{._format}_get', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\AvailableSpots', '_api_operation_name' => '_api_/available_spotss/{id}{._format}_get'], ['id', '_format'], ['GET' => 0], null, false, true, null]],
+        291 => [
+            [['_route' => '_api_/available_spotss{._format}_get_collection', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\AvailableSpots', '_api_operation_name' => '_api_/available_spotss{._format}_get_collection'], ['_format'], ['GET' => 0], null, false, true, null],
+            [['_route' => '_api_/available_spotss{._format}_post', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\AvailableSpots', '_api_operation_name' => '_api_/available_spotss{._format}_post'], ['_format'], ['POST' => 0], null, false, true, null],
         ],
-        328 => [
-            [['_route' => '_api_/available_spots/{id}{._format}_put', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\AvailableSpots', '_api_operation_name' => '_api_/available_spots/{id}{._format}_put'], ['id', '_format'], ['PUT' => 0], null, false, true, null],
-            [['_route' => '_api_/available_spots/{id}{._format}_patch', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\AvailableSpots', '_api_operation_name' => '_api_/available_spots/{id}{._format}_patch'], ['id', '_format'], ['PATCH' => 0], null, false, true, null],
-            [['_route' => '_api_/available_spots/{id}{._format}_delete', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\AvailableSpots', '_api_operation_name' => '_api_/available_spots/{id}{._format}_delete'], ['id', '_format'], ['DELETE' => 0], null, false, true, null],
+        329 => [
+            [['_route' => '_api_/available_spotss/{id}{._format}_put', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\AvailableSpots', '_api_operation_name' => '_api_/available_spotss/{id}{._format}_put'], ['id', '_format'], ['PUT' => 0], null, false, true, null],
+            [['_route' => '_api_/available_spotss/{id}{._format}_patch', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\AvailableSpots', '_api_operation_name' => '_api_/available_spotss/{id}{._format}_patch'], ['id', '_format'], ['PATCH' => 0], null, false, true, null],
+            [['_route' => '_api_/available_spotss/{id}{._format}_delete', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\AvailableSpots', '_api_operation_name' => '_api_/available_spotss/{id}{._format}_delete'], ['id', '_format'], ['DELETE' => 0], null, false, true, null],
         ],
-        384 => [[['_route' => '_api_/pre_registrations/{id}{._format}_get', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\PreRegistration', '_api_operation_name' => '_api_/pre_registrations/{id}{._format}_get'], ['id', '_format'], ['GET' => 0], null, false, true, null]],
-        410 => [
+        385 => [[['_route' => '_api_/pre_registrations/{id}{._format}_get', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\PreRegistration', '_api_operation_name' => '_api_/pre_registrations/{id}{._format}_get'], ['id', '_format'], ['GET' => 0], null, false, true, null]],
+        411 => [
             [['_route' => '_api_/pre_registrations{._format}_get_collection', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\PreRegistration', '_api_operation_name' => '_api_/pre_registrations{._format}_get_collection'], ['_format'], ['GET' => 0], null, false, true, null],
             [['_route' => '_api_/pre_registrations{._format}_post', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\PreRegistration', '_api_operation_name' => '_api_/pre_registrations{._format}_post'], ['_format'], ['POST' => 0], null, false, true, null],
         ],
-        448 => [
+        449 => [
             [['_route' => '_api_/pre_registrations/{id}{._format}_put', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\PreRegistration', '_api_operation_name' => '_api_/pre_registrations/{id}{._format}_put'], ['id', '_format'], ['PUT' => 0], null, false, true, null],
             [['_route' => '_api_/pre_registrations/{id}{._format}_patch', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\PreRegistration', '_api_operation_name' => '_api_/pre_registrations/{id}{._format}_patch'], ['id', '_format'], ['PATCH' => 0], null, false, true, null],
             [['_route' => '_api_/pre_registrations/{id}{._format}_delete', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\PreRegistration', '_api_operation_name' => '_api_/pre_registrations/{id}{._format}_delete'], ['id', '_format'], ['DELETE' => 0], null, false, true, null],

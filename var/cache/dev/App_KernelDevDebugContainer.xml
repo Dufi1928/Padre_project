@@ -389,6 +389,10 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
+    <service id="App\Repository\WaitingListRepository" class="App\Repository\WaitingListRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="argument_metadata_factory" class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory"/>
     <service id="argument_resolver.backed_enum_resolver" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\BackedEnumValueResolver">
       <tag priority="100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\BackedEnumValueResolver">controller.argument_value_resolver</tag>
@@ -3809,7 +3813,7 @@
     <service id="doctrine.orm.configuration" class="Doctrine\ORM\Configuration" abstract="true"/>
     <service id="doctrine.orm.entity_manager.abstract" class="Doctrine\ORM\EntityManager" lazy="true" abstract="true"/>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.rSqrZjz"/>
+      <argument type="service" id=".service_locator.j4y53n9"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -5472,6 +5476,8 @@
     <service id=".abstract.instanceof.App\Repository\AvailableSpotsRepository" class="App\Repository\AvailableSpotsRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PreRegistrationRepository" class="App\Repository\PreRegistrationRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\PreRegistrationRepository" class="App\Repository\PreRegistrationRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\WaitingListRepository" class="App\Repository\WaitingListRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\WaitingListRepository" class="App\Repository\WaitingListRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.w7.f4fT" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6006,11 +6012,12 @@
         <argument key="doctrine.orm.listeners.pdo_session_handler_schema_listener" type="service_closure" id="doctrine.orm.listeners.pdo_session_handler_schema_listener"/>
       </argument>
     </service>
-    <service id=".service_locator.rSqrZjz" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.j4y53n9" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\AvailableSpotsRepository" type="service_closure" id="App\Repository\AvailableSpotsRepository"/>
         <argument key="App\Repository\PreRegistrationRepository" type="service_closure" id="App\Repository\PreRegistrationRepository"/>
+        <argument key="App\Repository\WaitingListRepository" type="service_closure" id="App\Repository\WaitingListRepository"/>
       </argument>
     </service>
     <service id=".service_locator.KLVvNIq" class="Symfony\Component\DependencyInjection\ServiceLocator">
